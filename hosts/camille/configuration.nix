@@ -91,7 +91,6 @@
     #  thunderbird
     git
     micro
-    alacritty
     ];
   };
 

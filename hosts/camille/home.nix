@@ -3,6 +3,8 @@
 {
   imports = [
   	../../modules/home-manager/fish.nix
+  	../../modules/home-manager/ghostty.nix
+  	../../modules/home-manager/niri.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -37,6 +39,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+
+    pkgs.ghostty
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
