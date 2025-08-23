@@ -5,6 +5,7 @@
   	../../modules/home-manager/fish.nix
   	../../modules/home-manager/ghostty.nix
   	../../modules/home-manager/niri.nix
+	../../modules/home-manager/starship.nix
 
 	inputs.niri.homeModules.niri
   ];
@@ -43,6 +44,8 @@
     # '')
 
     pkgs.ghostty
+    pkgs.fastfetch
+    pkgs.starship
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

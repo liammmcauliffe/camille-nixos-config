@@ -175,18 +175,29 @@
 	            };
 	        };
 	        
-	        # Window rules (optional)
+	        # Window rules with proper rounded corners
 	        window-rules = [
+	            # Global rule for all windows - this creates rounded corners
+	            {
+	                matches = [{}];  # Empty match applies to all windows
+	                geometry-corner-radius = {
+	                    top-left = 12.0;
+	                    top-right = 12.0;
+	                    bottom-left = 12.0;
+	                    bottom-right = 12.0;
+	                };
+	                clip-to-geometry = true;
+	            }
+	            # Firefox-specific rule
 	            {
 	                matches = [{ app-id = "firefox"; }];
 	                default-column-width = { proportion = 0.5; };
 	            }
+	            # Ghostty-specific rule  
 	            {
 	                matches = [{ app-id = "ghostty"; }];
 	                default-column-width = { proportion = 0.33; };
-	         	}
-	         	{ geometry-corner-radius = 12; }
-	         	{ clip-to-geometry = true; }
+	            }
 	        ];
 	        
 	        # Layout settings
