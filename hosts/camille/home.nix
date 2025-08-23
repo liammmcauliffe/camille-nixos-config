@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
   	../../modules/home-manager/fish.nix
   	../../modules/home-manager/ghostty.nix
   	../../modules/home-manager/niri.nix
+
+	inputs.niri.homeModules.niri
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
