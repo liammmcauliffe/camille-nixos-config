@@ -106,6 +106,9 @@
   grc
   fzf
   niri
+  grim
+  slurp
+  brightnessctl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
