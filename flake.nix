@@ -21,7 +21,6 @@
       modules = [
         ./hosts/camille/configuration.nix
         inputs.home-manager.nixosModules.default
-        niri.nixosModules.niri
       ];
     };
   };

@@ -80,6 +80,9 @@
     # EDITOR = "emacs";
   };
 
+  # Enable Niri
+  programs.niri.enable = true;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
