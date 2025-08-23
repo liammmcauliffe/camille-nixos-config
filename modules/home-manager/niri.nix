@@ -122,8 +122,7 @@
 	            "Alt+Print".action = screenshot { show-pointer = true; };
 	            "Shift+Print".action = screenshot-window { write-to-disk = true; };
 	            
-	            # Floating windows - CHANGED: Moved from Mod+Space to Mod+Ctrl+Space
-	            # because DMS uses Mod+Space for spotlight launcher
+	            # Floating windows
 	            "Mod+Ctrl+Space".action = toggle-window-floating;
 	            "Mod+Shift+Space".action = switch-focus-between-floating-and-tiling;
 	            
@@ -131,11 +130,7 @@
 	            "Mod+Ctrl+Shift+H".action = swap-window-left;
 	            "Mod+Ctrl+Shift+L".action = swap-window-right;
 	            
-	            # System controls - NOTE: DMS will override the audio controls
-	            "XF86AudioRaiseVolume".action = spawn ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"];
-	            "XF86AudioLowerVolume".action = spawn ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"];
-	            "XF86AudioMute".action = spawn ["pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"];
-	            "XF86AudioMicMute".action = spawn ["pactl" "set-source-mute" "@DEFAULT_SOURCE@" "toggle"];
+	            # System controls
 	            "XF86MonBrightnessUp".action = spawn ["brightnessctl" "set" "10%+"];
 	            "XF86MonBrightnessDown".action = spawn ["brightnessctl" "set" "10%-"];
 	            
@@ -190,9 +185,9 @@
 	                };
 	                clip-to-geometry = true;
 	            }
-	            # Firefox-specific rule
+	            # Zen-specific rule
 	            {
-	                matches = [{ app-id = "firefox"; }];
+	                matches = [{ app-id = "zen"; }];
 	                default-column-width = { proportion = 0.5; };
 	            }
 	            # Ghostty-specific rule  
