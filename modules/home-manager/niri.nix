@@ -7,6 +7,8 @@
 	            # Your custom keybind
 	            "Mod+T".action = spawn "ghostty";
 	            "Mod+W".action = spawn "zen";
+				"Mod+E".action = spawn "zeditor";
+
 	            
 	            # Default niri keybinds using correct action names
 	            "Mod+Shift+Slash".action = show-hotkey-overlay;

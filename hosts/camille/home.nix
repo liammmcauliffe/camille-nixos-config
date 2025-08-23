@@ -6,6 +6,7 @@
     ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/niri.nix
     ../../modules/home-manager/starship.nix
+    ../../modules/home-manager/zed-editor.nix
 
     inputs.niri.homeModules.niri
     inputs.zen-browser.homeModules.default
@@ -27,6 +28,7 @@
     pkgs.starship
     pkgs.bibata-cursors
     pkgs.yazi
+    pkgs.zed-editor
   ];
 
   home.sessionVariables = {

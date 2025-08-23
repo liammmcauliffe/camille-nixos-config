@@ -105,6 +105,7 @@
   environment.systemPackages = with pkgs; [
   grc
   fzf
+  rust-analyzer
   niri
   grim
   slurp
