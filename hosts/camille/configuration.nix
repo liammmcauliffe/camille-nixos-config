@@ -109,6 +109,8 @@
   grim
   slurp
   brightnessctl
+  swaybg
+  imagemagick
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

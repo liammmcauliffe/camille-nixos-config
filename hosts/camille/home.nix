@@ -26,6 +26,7 @@
     pkgs.fastfetch
     pkgs.starship
     pkgs.bibata-cursors
+    pkgs.yazi
   ];
 
   home.sessionVariables = {
