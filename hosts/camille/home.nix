@@ -32,13 +32,14 @@
   ];
 
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    ZED_ALLOW_EMULATED_GPU = "1";
+    MOZ_ENABLE_WAYLAND = "1";
   };
 
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
-    
+
     name = "Bibata-Modern-Ice";
     size = 24;
     package = pkgs.bibata-cursors;
@@ -53,9 +54,9 @@
   # Enable DankMaterialShell
   programs.dankMaterialShell = {
     enable = true;
-    enableKeybinds = true;      
-    enableSystemd = false;      
-    enableSpawn = true;        
+    enableKeybinds = true;
+    enableSystemd = false;
+    enableSpawn = true;
   };
 
   # Vulkan support
