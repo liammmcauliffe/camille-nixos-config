@@ -1,15 +1,11 @@
 {pkgs, lib, ... }:
-
 {
     programs.zed-editor = {
         enable = true;
-
         ## This populates the userSettings "auto_install_extensions"
-        extensions = ["nix" "toml" "elixir" "make"];
-
+        extensions = ["nix" "toml" "elixir" "make" "one-dark-pro" "material-icon-theme" "git-firefly"];
         ## everything inside of these brackets are Zed options.
         userSettings = {
-
             assistant = {
                 enabled = true;
                 version = "2";
@@ -22,7 +18,6 @@
                     provider = "zed.dev";
                     model = "claude-3-5-sonnet-latest";
                 };
-
                 #                inline_alternatives = [
                 #                    {
                 #                        provider = "copilot_chat";
@@ -30,12 +25,10 @@
                 #                    }
                 #                ];
             };
-
             node = {
                 path = lib.getExe pkgs.nodejs;
                 npm_path = lib.getExe' pkgs.nodejs "npm";
             };
-
             hour_format = "hour12";
             auto_update = true;
             terminal = {
@@ -67,12 +60,8 @@
                 };
                 working_directory = "current_project_directory";
             };
-
-
-
             lsp = {
                 rust-analyzer = {
-
                     binary = {
                         #                        path = lib.getExe pkgs.rust-analyzer;
                         path_lookup = true;
@@ -83,7 +72,6 @@
                         path_lookup = true; 
                     }; 
                 };
-
                 elixir-ls = {
                     binary = {
                         path_lookup = true; 
@@ -93,8 +81,6 @@
                     };
                 };
             };
-
-
             languages = {
                 "Elixir" = {
                     language_servers = ["!lexical" "elixir-ls" "!next-ls"];
@@ -115,21 +101,18 @@
                     };
                 };
             };
-
             vim_mode = false;
             ## tell zed to use direnv and direnv can use a flake.nix enviroment.
             load_direnv = "shell_hook";
             base_keymap = "VSCode";
             theme = {
                 mode = "system";
-                light = "One Light";
-                dark = "One Dark";
+                light = "One Dark Pro";
+                dark = "One Dark Pro";
             };
             show_whitespaces = "all" ;
             ui_font_size = 16;
             buffer_font_size = 16;
-
         };
-
     };
 }
