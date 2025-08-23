@@ -8,6 +8,7 @@
 	../../modules/home-manager/starship.nix
 
 	inputs.niri.homeModules.niri
+	inputs.zen-browser.homeModules.default
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -46,6 +47,8 @@
     pkgs.ghostty
     pkgs.fastfetch
     pkgs.starship
+
+    pkgs.bibata-cursors
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,8 +86,22 @@
     # EDITOR = "emacs";
   };
 
+  home.pointerCursor = {
+  	gtk.enable = true;
+  	x11.enable = true;
+	
+  	name = "Bibata-Modern-Ice";
+
+  	size = 24;
+
+  	package = pkgs.bibata-cursors;
+  };
+
   # Enable Niri
   programs.niri.enable = true;
+
+  # Enable Zen
+  programs.zen-browser.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

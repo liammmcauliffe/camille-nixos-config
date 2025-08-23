@@ -6,6 +6,7 @@
 	        binds = with config.lib.niri.actions; {
 	            # Your custom keybind
 	            "Mod+T".action = spawn "ghostty";
+	            "Mod+W".action = spawn "zen";
 	            
 	            # Default niri keybinds using correct action names
 	            "Mod+Shift+Slash".action = show-hotkey-overlay;
