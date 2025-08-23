@@ -51,6 +51,7 @@
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -64,6 +65,15 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
+
+  # Enable UPower for power management
+  services.upower.enable = true;
+
+  # Enable power profiles daemon
+  services.power-profiles-daemon.enable = true;
+
+  # Enable DBus
+  services.dbus.enable = true;
 
   # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.poilk = {
@@ -112,6 +122,11 @@
   brightnessctl
   swaybg
   imagemagick
+
+  glib
+  khal
+  ddcutil
+  networkmanager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
