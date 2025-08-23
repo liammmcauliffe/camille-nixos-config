@@ -9,6 +9,7 @@
 	            
 	            # Default niri keybinds using correct action names
 	            "Mod+Shift+Slash".action = show-hotkey-overlay;
+				"Mod+O".action = toggle-overview;
 	            
 	            # Quit niri
 	            "Mod+Shift+E".action = quit;
@@ -158,7 +159,7 @@
 	        
 	        # Additional niri settings
 	        prefer-no-csd = true;
-	        hotkey-overlay.skip-at-startup = true;
+	        hotkey-overlay.skip-at-startup = false;
 	        
 	        # Input settings
 	        input = {
@@ -180,6 +181,12 @@
 	                matches = [{ app-id = "firefox"; }];
 	                default-column-width = { proportion = 0.5; };
 	            }
+	            {
+	                matches = [{ app-id = "ghostty"; }];
+	                default-column-width = { proportion = 0.33; };
+	         	}
+	         	{ geometry-corner-radius = 12; }
+	         	{ clip-to-geometry = true; }
 	        ];
 	        
 	        # Layout settings
