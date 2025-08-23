@@ -58,7 +58,7 @@
                 line_height = "comfortable";
                 option_as_meta = false;
                 button = false;
-                shell = "system"; 
+                shell = 
                 {
                                     program = "fish";
                 };
