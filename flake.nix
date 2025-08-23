@@ -10,17 +10,22 @@
     };
 
     niri = {
-	  url = "github:sodiboo/niri-flake";
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {
-    	url = "github:0xc000022070/zen-browser-flake";
-    	inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dankmaterialshell = {
+      url = "github:liammmcauliffe/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, niri, zen-browser, ... }@inputs: {
+  outputs = { self, nixpkgs, niri, zen-browser, dankmaterialshell, ... }@inputs: {
     nixosConfigurations.camille = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
