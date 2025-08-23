@@ -47,9 +47,9 @@
 	            "Mod+Shift+Right".action = move-column-right;
 	            
 	            # Consume or expel windows from columns
-	            "Mod+Comma".action = consume-window-into-column;
+	            # NOTE: Changed from "Mod+Comma" to avoid conflict with DMS settings keybind
+	            "Mod+Shift+Comma".action = consume-window-into-column;
 	            "Mod+Period".action = expel-window-from-column;
-	            "Mod+Shift+Comma".action = consume-or-expel-window-left;
 	            "Mod+Shift+Period".action = consume-or-expel-window-right;
 	            
 	            # Window and column sizing
@@ -122,15 +122,16 @@
 	            "Alt+Print".action = screenshot { show-pointer = true; };
 	            "Shift+Print".action = screenshot-window { write-to-disk = true; };
 	            
-	            # Floating windows
-	            "Mod+Space".action = toggle-window-floating;
+	            # Floating windows - CHANGED: Moved from Mod+Space to Mod+Ctrl+Space
+	            # because DMS uses Mod+Space for spotlight launcher
+	            "Mod+Ctrl+Space".action = toggle-window-floating;
 	            "Mod+Shift+Space".action = switch-focus-between-floating-and-tiling;
 	            
 	            # Window swapping
 	            "Mod+Ctrl+Shift+H".action = swap-window-left;
 	            "Mod+Ctrl+Shift+L".action = swap-window-right;
 	            
-	            # System controls
+	            # System controls - NOTE: DMS will override the audio controls
 	            "XF86AudioRaiseVolume".action = spawn ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"];
 	            "XF86AudioLowerVolume".action = spawn ["pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"];
 	            "XF86AudioMute".action = spawn ["pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"];
