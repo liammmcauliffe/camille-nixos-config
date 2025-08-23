@@ -86,7 +86,7 @@
     isNormalUser = true;
     description = "Liam McAuliffe";
     extraGroups = [ "networkmanager" "wheel" ];
-    
+    shell = pkgs.fish;
     packages = with pkgs; [
     #  thunderbird
     git
@@ -105,7 +105,7 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  # Install fish
+  # Install fish.
   programs.fish.enable = true;
 
   # Allow unfree packages
@@ -116,12 +116,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  fish
-  fishPlugins.done
-  fishPlugins.forgit
-  fishPlugins.hydro
-  fishPlugins.grc
-  fishPlugins.fzf-fish
   grc
   fzf
 
