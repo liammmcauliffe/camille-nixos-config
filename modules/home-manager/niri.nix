@@ -190,7 +190,7 @@
 	            # Zen-specific rule
 	            {
 	                matches = [{ app-id = "zen"; }];
-	                default-column-width = { proportion = 0.5; };
+	                default-column-width = { proportion = 0.75; };
 	            }
 	            # Ghostty-specific rule  
 	            {
