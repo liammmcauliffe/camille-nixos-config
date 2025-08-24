@@ -14,6 +14,17 @@
             { name = "forgit"; src = pkgs.fishPlugins.forgit.src; }
             { name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
         ];
+
+        shellAbbrs = {
+        	nix = "cd ~/nixos";
+            rebuild = "sudo nixos-rebuild switch --flake ~/nixos/.#camille";
+            update = "nix flake update";
+
+            grep = "grep -r 'example' . ";
+            
+            home = "micro ~/nixos/hosts/camille/home.nix";
+            configuration = "micro ~/nixos/hosts/camille/configuration.nix";
+        };
     };
 
     programs.bash = {

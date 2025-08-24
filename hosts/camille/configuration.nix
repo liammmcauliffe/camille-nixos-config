@@ -127,6 +127,9 @@
   khal
   ddcutil
   networkmanager
+  gammastep
+
+  nodejs_24
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
