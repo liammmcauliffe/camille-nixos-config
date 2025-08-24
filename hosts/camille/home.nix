@@ -19,6 +19,7 @@
   home.homeDirectory = "/home/poilk";
 
   home.stateVersion = "25.05";
+  nixpkgs.config.allowUnfree = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -29,6 +30,7 @@
     pkgs.bibata-cursors
     pkgs.yazi
     pkgs.zed-editor
+    pkgs.code-cursor
   ];
 
   home.sessionVariables = {

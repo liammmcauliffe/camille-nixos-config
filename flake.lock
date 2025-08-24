@@ -8,11 +8,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1755994581,
-        "narHash": "sha256-7UhLvSbCt0Wr6CFutsNbv2edMq3yK2mUr2QAtSKT6BA=",
+        "lastModified": 1756057891,
+        "narHash": "sha256-TajfeQOCqnvHAlgoanQ9SzVgk6QINZ7WJdJuyV5X1Vg=",
         "owner": "liammmcauliffe",
         "repo": "DankMaterialShell",
-        "rev": "afa60696c84bc11c6338aa4f193f8dc3c2190913",
+        "rev": "c0884f53a67b40d591ab14115a9d5c05df24b6e0",
         "type": "github"
       },
       "original": {
